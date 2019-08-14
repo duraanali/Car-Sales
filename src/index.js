@@ -4,12 +4,12 @@ import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import { addingFeatures } from './reducers';
+import { carsReducer } from './reducers';
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-export const store = createStore(addingFeatures);
+export const store = createStore(carsReducer);
 
 
 const rootElement = document.getElementById('root');
