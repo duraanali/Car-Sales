@@ -5,7 +5,9 @@ const initialState = {
         name: '2019 Ford Mustang',
         image:
             'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-        features: []
+        features: [
+
+        ]
     },
     store: [
         { id: 1, name: 'V-6 engine', price: 1500 },
@@ -17,11 +19,8 @@ const initialState = {
 
 export const addingFeatures = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADDING_FEATURES':
-            return {
-                ...state
-
-            };
+        case 'BUY_CAR':
+            return { ...state, features: [state.car.features, action.payload] };
         default:
             return state;
     }

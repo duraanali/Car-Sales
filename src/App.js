@@ -7,6 +7,7 @@ import Total from './components/Total';
 
 const App = () => {
 
+
   const removeFeature = item => {
     // dispatch an action here to remove an item
   };
@@ -18,12 +19,12 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header />
-        <AddedFeatures />
+        <Header car={state.car} />
+        <AddedFeatures car={state.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures />
-        {/* <Total /> */}
+        <AdditionalFeatures store={state.store} />
+        <Total car={state.car} additionalPrice={state.additionalPrice} />
       </div>
     </div>
   );

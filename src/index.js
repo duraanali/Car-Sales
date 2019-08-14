@@ -11,6 +11,7 @@ import './styles.scss';
 
 export const store = createStore(addingFeatures);
 
+
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
