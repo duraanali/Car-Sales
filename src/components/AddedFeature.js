@@ -12,7 +12,7 @@ const AddedFeature = props => {
 
 const mapStateToProps = state => {
   return {
-    priceOfCar: state.price
+    nameOfCar: state.name,
   };
 };
 
